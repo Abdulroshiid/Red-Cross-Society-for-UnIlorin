@@ -126,7 +126,7 @@
 
   .menu-toggle {
     display: flex;
-    border: none;
+    /* border: none; */
   }
   /* Make Volunteer button fit mobile menu */
   .btn {
