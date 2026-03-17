@@ -75,10 +75,10 @@
   cursor: pointer;
 }
 
-.menu-toggle:focus {
+/* .menu-toggle:focus {
   outline: 2px solid #d32f2f;
   outline-offset: 2px;
-}
+} */
 
 .menu-toggle .fa-bars,
 .menu-toggle .fa-times {
