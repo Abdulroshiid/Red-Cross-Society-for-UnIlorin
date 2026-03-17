@@ -38,6 +38,10 @@
   padding: 0.5rem;
   font-weight: 500;
   transition: color 0.3s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 .nav-links li a:hover {
@@ -45,18 +49,19 @@
 }
 
 /* Special CTA button */
-.btn {
+.nav-links li .btn {
+  display: inline-block;
   text-decoration: none;
   padding: 10px 20px;
   background-color: #d32f2f;
-  color: #fff;
+  color: white;
   border-radius: 6px;
   transition: background-color 0.3s;
 }
 
-.btn:hover {
+.nav-links li .btn:hover {
+  color: white;
   background-color: #b71c1c;
-  color: #fff;
 }
 
 /* Mobile menu toggle (hamburger) */
@@ -95,5 +100,14 @@
 
   .menu-toggle {
     display: flex;
+  }
+  /* Make Volunteer button fit mobile menu */
+  .btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 12px 0;
+    border-radius: 8px;
+    margin: 5px 0;
   }
 }
