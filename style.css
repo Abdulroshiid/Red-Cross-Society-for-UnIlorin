@@ -75,10 +75,9 @@
   cursor: pointer;
 }
 
-/* .menu-toggle:focus {
-  outline: 2px solid #d32f2f;
-  outline-offset: 2px;
-} */
+.menu-toggle:focus {
+  outline: none;
+}
 
 .menu-toggle .fa-bars,
 .menu-toggle .fa-times {
@@ -89,12 +88,12 @@
 @media (max-width: 768px) {
   .nav-links {
     position: absolute;
-    top: 95px;
-    right: 400px;
+    top: 65px;
+    right: -100%;
     flex-direction: column;
     background-color: #fff;
     width: 100%;
-    padding: 20px;
+    padding: 30px;
     gap: 5px;
     transition: right 0.3s;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -126,14 +125,35 @@
 
   .menu-toggle {
     display: flex;
-    /* border: none; */
   }
-  /* Make Volunteer button fit mobile menu */
-  .btn {
+
+  /* Put Donate button inside mobile menu flow */
+  /* Only show donate in dropdown when menu is open */
+  .nav-buttons {
+    display: none;
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  .nav-links.active .nav-buttons {
     display: block;
+  }
+
+  .nav-buttons .btn {
+    display: block;
+    width: 100%;
     text-align: center;
     padding: 12px 0;
     border-radius: 8px;
     margin: 5px 0;
+  }
+
+  /* Make nav-links list vertical and full-width */
+  .nav-links ul {
+    flex-direction: column;
+  }
+
+  .nav-links ul li a {
+    width: 100%;
   }
 }
