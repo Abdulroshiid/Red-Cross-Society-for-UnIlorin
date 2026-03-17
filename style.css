@@ -5,6 +5,19 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: Open-sans;
+  src: url(Fonts/OpenSans-VariableFont_wdth\,wght.ttf);
+}
+
+@font-face {
+  font-family: poppins;
+  src: url(Fonts/Poppins-Regular.ttf);
+}
+body {
+  font-family: poppins;
+}
+
 /* Navbar styling */
 .navbar {
   display: flex;
