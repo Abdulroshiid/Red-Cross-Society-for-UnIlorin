@@ -25,10 +25,11 @@
   color: #d32f2f;
 }
 
-.nav-links {
-  list-style: none;
+.nav-links ul {
   display: flex;
-  gap: 25px;
+  list-style-type: none;
+  flex-direction: row;
+  gap: 3rem;
 }
 
 .nav-links li a {
@@ -64,34 +65,55 @@
   background-color: #b71c1c;
 }
 
-/* Mobile menu toggle (hamburger) */
+/* Mobile menu toggle (FontAwesome icon) */
 .menu-toggle {
   display: none;
-  flex-direction: column;
+  border: none;
+  background: transparent;
+  color: #1a1a1a;
+  font-size: 1.5rem;
   cursor: pointer;
-  gap: 5px;
 }
 
-.menu-toggle span {
-  height: 3px;
-  width: 25px;
-  background-color: #1a1a1a;
-  border-radius: 2px;
+.menu-toggle:focus {
+  outline: 2px solid #d32f2f;
+  outline-offset: 2px;
+}
+
+.menu-toggle .fa-bars,
+.menu-toggle .fa-times {
+  pointer-events: none;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
   .nav-links {
     position: absolute;
-    top: 70px;
+    top: 95px;
     right: -100%;
     flex-direction: column;
     background-color: #fff;
-    width: 200px;
+    width: 100%;
     padding: 20px;
-    gap: 15px;
+    gap: 5px;
     transition: right 0.3s;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+  }
+
+  .nav-links ul li a {
+    color: black;
+  }
+
+  .nav-links ul li a:hover {
+    color: white;
+  }
+
+  .nav-links ul li:hover {
+    background-color: #b71c1c;
   }
 
   .nav-links.active {
@@ -100,11 +122,11 @@
 
   .menu-toggle {
     display: flex;
+    border: none;
   }
   /* Make Volunteer button fit mobile menu */
   .btn {
     display: block;
-    width: 100%;
     text-align: center;
     padding: 12px 0;
     border-radius: 8px;
