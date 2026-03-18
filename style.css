@@ -15,7 +15,7 @@
   src: url(Fonts/Poppins-Regular.ttf);
 }
 body {
-  font-family: poppins;
+  font-family: "poppins", sans-serif;
 }
 
 /* Navbar styling */
@@ -23,7 +23,7 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 20px;
+  padding: 10px 20px;
   background-color: #fff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   position: sticky;
@@ -32,7 +32,7 @@ body {
 }
 
 .logo img {
-  width: 70px;
+  width: 60px;
 }
 
 .nav-links ul {
@@ -94,7 +94,7 @@ body {
 }
 
 .nav-buttons a i {
-  font-size: 1rem;
+  font-size: 1.1rem;
   padding-inline: 0.5rem;
 }
 
@@ -121,7 +121,7 @@ body {
 @media (max-width: 768px) {
   .nav-links {
     position: absolute;
-    top: 100px;
+    top: 80px;
     right: 100%;
     flex-direction: column;
     background-color: #fff;
