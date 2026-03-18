@@ -110,6 +110,11 @@ html {
   flex-direction: column;
 }
 
+.home-page h1 span {
+  text-decoration: underline;
+  text-decoration-color: #b71c1c;
+}
+
 .home-page h1 {
   color: white;
   font-size: 3rem;
