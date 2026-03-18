@@ -21,9 +21,9 @@ body {
 /* Navbar styling */
 .navbar {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 10px 40px;
   background-color: #fff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   position: sticky;
@@ -59,45 +59,6 @@ body {
   color: #d32f2f;
 }
 
-/* Special CTA button */
-.nav-links li .btn {
-  display: inline-block;
-  text-decoration: none;
-  padding: 10px 20px;
-  background-color: #d32f2f;
-  color: white;
-  border-radius: 6px;
-  transition: background-color 0.3s;
-}
-
-.nav-links li .btn:hover {
-  color: white;
-  background-color: #b71c1c;
-}
-
-.nav-buttons {
-  background-color: #b71c1c;
-  cursor: pointer;
-  padding: 0.6rem 2rem;
-  border: none;
-  border-radius: 0.2rem;
-  transition: 0.3s;
-}
-
-.nav-buttons:hover {
-  background-color: #d32f2f;
-}
-
-.nav-buttons a {
-  color: white;
-  text-decoration: none;
-}
-
-.nav-buttons a i {
-  font-size: 1.1rem;
-  padding-inline: 0.5rem;
-}
-
 /* Mobile menu toggle (FontAwesome icon) */
 .menu-toggle {
   display: none;
@@ -116,6 +77,8 @@ body {
 .menu-toggle .fa-times {
   pointer-events: none;
 }
+
+/* HOME PAGE SECTION */
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -158,27 +121,6 @@ body {
 
   .menu-toggle {
     display: flex;
-  }
-
-  /* Put Donate button inside mobile menu flow */
-  /* Only show donate in dropdown when menu is open */
-  .nav-buttons {
-    display: none;
-    width: 100%;
-    margin-top: 15px;
-  }
-
-  .nav-links.active .nav-buttons {
-    display: block;
-  }
-
-  .nav-buttons .btn {
-    display: block;
-    width: 100%;
-    text-align: center;
-    padding: 12px 0;
-    border-radius: 8px;
-    margin: 5px 0;
   }
 
   /* Make nav-links list vertical and full-width */
