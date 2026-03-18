@@ -206,10 +206,16 @@ html {
   }
 
   .home-page h1 {
-    font-size: 1.2rem;
+    font-size: 35px;
+    padding-inline: 0.8rem;
   }
 
   .home-page p {
-    font-size: 1rem;
+    font-size: 18px;
+    padding-inline: 0.8rem;
+  }
+  .home-page button {
+    align-self: first baseline;
+    margin-left: 1rem;
   }
 }
