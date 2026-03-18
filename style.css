@@ -18,6 +18,16 @@ body {
   font-family: "poppins", sans-serif;
 }
 
+h1,
+h2,
+h3 {
+  font-family: "Open-sans", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 /* Navbar styling */
 .navbar {
   display: flex;
@@ -26,7 +36,8 @@ body {
   padding: 10px 40px;
   background-color: #fff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  position: sticky;
+  position: fixed;
+  width: 100%;
   top: 0;
   z-index: 100;
 }
@@ -79,6 +90,18 @@ body {
 }
 
 /* HOME PAGE SECTION */
+
+#home {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)),
+    url("Images/background.jpeg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 37.5rem;
+  margin-top: 5rem;
+}
 
 /* Responsive */
 @media (max-width: 768px) {
