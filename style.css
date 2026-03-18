@@ -104,9 +104,9 @@ html {
 
 .home-page {
   height: 100vh;
-  padding-block: 13rem;
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
 }
 
@@ -203,5 +203,13 @@ html {
 
   .nav-links ul li a {
     width: 100%;
+  }
+
+  .home-page h1 {
+    font-size: 1.2rem;
+  }
+
+  .home-page p {
+    font-size: 1rem;
   }
 }
