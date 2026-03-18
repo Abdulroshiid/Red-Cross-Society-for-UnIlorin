@@ -31,7 +31,7 @@ html {
 /* Navbar styling */
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   padding: 10px 40px;
   background-color: #fff;
@@ -132,6 +132,11 @@ html {
   color: white;
   font-weight: bold;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0.5rem;
   background-color: #b71c1c;
   border: none;
   border-radius: 0.2rem;
@@ -142,6 +147,10 @@ html {
 
 .home-page button:hover {
   background-color: #d32f2f;
+}
+
+.home-page button i {
+  font-size: 1.2rem;
 }
 
 /* Responsive */
