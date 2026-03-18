@@ -260,7 +260,7 @@ html {
     font-size: 1.5rem;
   }
   .about-image img {
-    width: 100%;
+    width: 30rem;
     image-resolution: initial;
   }
 }
