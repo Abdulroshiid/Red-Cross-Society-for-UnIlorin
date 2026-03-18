@@ -244,6 +244,7 @@ html {
   }
 
   .home-page p {
+    padding-inline: 1rem;
     text-align: center;
     font-size: 18px;
   }
