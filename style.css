@@ -261,7 +261,8 @@ html {
     font-size: 1.5rem;
   }
   .about-image img {
-    width: 5rem;
-    margin-left: 3rem;
+    margin-left: 4rem;
+    width: 370px;
+    height: 300px;
   }
 }
