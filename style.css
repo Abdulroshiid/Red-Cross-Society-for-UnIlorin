@@ -93,14 +93,50 @@ html {
 
 #home {
   background-image:
-    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)),
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 1)),
     url("Images/background.jpeg");
-
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   height: 37.5rem;
   margin-top: 5rem;
+}
+
+.home-page {
+  height: 100vh;
+  padding-block: 13rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.home-page h1 {
+  color: white;
+  font-size: 3rem;
+}
+
+.home-page p {
+  color: white;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+
+.home-page button {
+  padding-inline: 3rem;
+  padding-block: 0.7rem;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #b71c1c;
+  border: none;
+  border-radius: 0.2rem;
+  margin-top: 1rem;
+  font-size: 1rem;
+  transition: 0.5s ease-in;
+}
+
+.home-page button:hover {
+  background-color: #d32f2f;
 }
 
 /* Responsive */
