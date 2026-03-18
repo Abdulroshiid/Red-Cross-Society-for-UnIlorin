@@ -156,16 +156,37 @@ html {
 
 #about {
   padding-bottom: 5rem;
-  margin-top: 5rem;
 }
 
-#about h1 {
+.about-header h1 {
+  padding-top: 5rem;
   text-align: center;
   font-size: 3rem;
 }
-#about h1 span {
+.about-header h1 span {
   text-decoration: underline;
   text-decoration-color: #d32f2f;
+}
+
+.about-us {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 2rem;
+  padding-top: 3rem;
+  width: 100%;
+}
+
+.about-content {
+  padding-inline: 2rem;
+}
+
+.about-image img {
+  margin-right: 4rem;
+  width: 40rem;
+  height: 30rem;
+  border-radius: 3rem;
 }
 
 /* Responsive */
@@ -225,5 +246,21 @@ html {
   .home-page p {
     text-align: center;
     font-size: 18px;
+  }
+  .about-header h1 {
+    font-size: 2rem;
+  }
+  .about-us {
+    display: flex;
+    flex-direction: column;
+  }
+  .about-content {
+    padding-top: 3rem;
+    padding-inline: 1.5rem;
+    font-size: 1.5rem;
+  }
+  .about-image img {
+    width: 100%;
+    image-resolution: initial;
   }
 }
