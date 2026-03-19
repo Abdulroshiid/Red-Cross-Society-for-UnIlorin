@@ -240,7 +240,8 @@ html {
 
   /* HOMEPAGE SECTION */
   .home-page h1 {
-    padding-block: 1rem;
+    padding-inline: 1rem;
+    font-weight: 900;
     font-size: 35px;
     text-align: left;
   }
@@ -248,7 +249,8 @@ html {
   .home-page p {
     padding-inline: 1rem;
     text-align: left;
-    font-size: 18px;
+    font-weight: 600;
+    font-size: 16px;
   }
 
   /* ABOUT US RESPONSIVENESS */
@@ -258,12 +260,12 @@ html {
   }
 
   .about-content p {
-    padding-inline: 2rem;
     font-size: 18px;
   }
 
   .about-us {
     display: flex;
+    padding-inline: 1.5rem;
     flex-direction: column;
   }
 
