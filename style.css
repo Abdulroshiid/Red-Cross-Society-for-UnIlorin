@@ -174,8 +174,8 @@ html {
   align-items: center;
   justify-content: space-evenly;
   gap: 2rem;
-  padding-inline: 3rem;
-  padding-top: 3rem;
+  padding-inline: 4rem;
+  padding-top: 5rem;
   width: 100%;
 }
 
@@ -242,12 +242,12 @@ html {
   .home-page h1 {
     padding-block: 1rem;
     font-size: 35px;
-    text-align: center;
+    text-align: left;
   }
 
   .home-page p {
     padding-inline: 1rem;
-    text-align: center;
+    text-align: left;
     font-size: 18px;
   }
 
@@ -258,6 +258,7 @@ html {
   }
 
   .about-content p {
+    padding-inline: 2rem;
     font-size: 18px;
   }
 
@@ -268,6 +269,6 @@ html {
 
   .about-image img {
     width: 320px;
-    height: 270px;
+    height: auto;
   }
 }
