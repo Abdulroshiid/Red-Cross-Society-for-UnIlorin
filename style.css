@@ -174,18 +174,14 @@ html {
   align-items: center;
   justify-content: space-evenly;
   gap: 2rem;
+  padding-inline: 3rem;
   padding-top: 3rem;
   width: 100%;
 }
 
-.about-content {
-  padding-inline: 2rem;
-}
-
 .about-image img {
-  margin-right: 4rem;
-  width: 40rem;
-  height: 30rem;
+  width: 35rem;
+  height: auto;
   border-radius: 3rem;
 }
 
@@ -271,7 +267,6 @@ html {
   }
 
   .about-image img {
-    margin-left: 4rem;
     width: 320px;
     height: 270px;
   }
