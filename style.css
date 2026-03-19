@@ -267,6 +267,7 @@ html {
     display: flex;
     padding-inline: 1.5rem;
     flex-direction: column;
+    padding-top: 1.5rem;
   }
 
   .about-image img {
