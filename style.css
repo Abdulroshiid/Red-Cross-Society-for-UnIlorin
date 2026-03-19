@@ -270,6 +270,7 @@ html {
   }
 
   .about-image img {
+    border-radius: 1.5rem;
     width: 320px;
     height: auto;
   }
