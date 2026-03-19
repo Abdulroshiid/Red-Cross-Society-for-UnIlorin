@@ -192,6 +192,7 @@ html {
 /* Responsive */
 @media (max-width: 768px) {
   .nav-links {
+    position: fixed;
     position: absolute;
     top: 75px;
     right: 100%;
@@ -236,6 +237,11 @@ html {
   .nav-links ul {
     flex-direction: column;
   }
+
+  .nav-links ul li a {
+    width: 100%;
+  }
+
   /* HOMEPAGE SECTION */
   .home-page h1 {
     padding-block: 1rem;
@@ -266,7 +272,7 @@ html {
 
   .about-image img {
     margin-left: 4rem;
-    width: 370px;
-    height: 300px;
+    width: 320px;
+    height: 270px;
   }
 }
