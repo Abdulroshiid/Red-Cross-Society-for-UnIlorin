@@ -185,6 +185,23 @@ html {
   border-radius: 3rem;
 }
 
+/* ACTIVITIES PAGE SECTION */
+.activities-header {
+  background-color: #d32f2f;
+  color: black;
+}
+
+.activities-header h1 {
+  text-align: center;
+  padding-top: 5rem;
+  font-size: 3rem;
+}
+
+.activities-header span {
+  text-decoration: underline;
+  text-decoration-color: white;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .nav-links {
