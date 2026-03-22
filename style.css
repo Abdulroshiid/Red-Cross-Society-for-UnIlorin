@@ -208,12 +208,17 @@ html {
   padding-block: 4rem;
   padding-inline: 2rem;
   border-radius: 0.6rem;
+  transition: ease-out 0.3s;
 }
 
 .activities-box h1 {
   text-align: center;
   padding-bottom: 1rem;
   font-size: 1.5rem;
+}
+
+.activities-box:hover {
+  background-color: #aa0a0a;
 }
 
 /* Responsive */
