@@ -189,6 +189,7 @@ html {
 #activities {
   background-color: #ed1b2e;
   color: white;
+  padding-bottom: 2rem;
 }
 
 .activities-header h1 {
@@ -203,9 +204,20 @@ html {
 }
 
 .activities-container {
+  padding-top: 2rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+
+.activities-box {
+  background-color: #1a1a1a;
+  padding-block: 1rem;
+  padding-inline: 2rem;
+}
+
+.activities-box h1 {
+  font-size: 1rem;
 }
 
 /* Responsive */
