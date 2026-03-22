@@ -186,7 +186,7 @@ html {
 }
 
 /* ACTIVITIES PAGE SECTION */
-.activities-header {
+#activities {
   background-color: #ed1b2e;
   color: white;
 }
