@@ -187,8 +187,8 @@ html {
 
 /* ACTIVITIES PAGE SECTION */
 .activities-header {
-  background-color: #d32f2f;
-  color: black;
+  background-color: #ed1b2e;
+  color: white;
 }
 
 .activities-header h1 {
@@ -199,7 +199,7 @@ html {
 
 .activities-header span {
   text-decoration: underline;
-  text-decoration-color: white;
+  text-decoration-color: black;
 }
 
 /* Responsive */
