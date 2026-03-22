@@ -313,4 +313,10 @@ html {
     width: 320px;
     height: 250px;
   }
+
+  /* ACTIVITIES RESPONSIVENESS */
+
+  .activities-header h1 {
+    font-size: 2rem;
+  }
 }
