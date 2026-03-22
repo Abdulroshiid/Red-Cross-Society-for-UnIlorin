@@ -211,7 +211,7 @@ html {
 }
 
 .activities-box {
-  background-color: #1a1a1a;
+  background-color: #b71c1c;
   padding-block: 4rem;
   padding-inline: 2rem;
   border-radius: 0.6rem;
@@ -220,7 +220,7 @@ html {
 .activities-box h1 {
   text-align: center;
   padding-bottom: 1rem;
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 
 /* Responsive */
