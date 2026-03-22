@@ -199,8 +199,7 @@ html {
 }
 
 .activities-header span {
-  text-decoration: underline;
-  text-decoration-color: black;
+  color: black;
 }
 
 .activities-container {
