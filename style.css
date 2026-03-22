@@ -212,9 +212,8 @@ html {
 
 .activities-box {
   background-color: #1a1a1a;
-  padding-block: 1rem;
+  padding-block: 4rem;
   padding-inline: 2rem;
-  height: 200px;
   border-radius: 0.6rem;
 }
 
