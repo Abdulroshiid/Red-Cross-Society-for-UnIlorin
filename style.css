@@ -232,8 +232,8 @@ html {
 
 /* Join Section */
 #join {
-  padding: 80px 20px;
-  background-color: #f5f5f5;
+  padding-block: 80px;
+  padding-inline: 20px;
 }
 
 .join-container {
@@ -254,8 +254,9 @@ html {
 
 .join-content {
   display: flex;
-  justify-content: space-between;
-  gap: 40px;
+  align-items: center;
+  justify-content: space-around;
+  gap: 3rem;
   text-align: left;
 }
 
