@@ -53,10 +53,11 @@ form.addEventListener("submit", function (e) {
   // simple validation
   if (!name || !email) {
     messageBox.textContent = `Please, enter your name and email.`;
+    messageBox.className = "form-message error";
     return;
   }
 
-  // log data (for now)
+  // Simulate Success
   console.log({
     name,
     email,
@@ -65,8 +66,7 @@ form.addEventListener("submit", function (e) {
     message,
   });
 
-  // feedback to user
-  alert("Thank you for joining! We will contact you soon.");
+  messageBox.textContent = `Thank you for applying to join! We will contact you soon.`;
 
   // reset form
   form.reset();
