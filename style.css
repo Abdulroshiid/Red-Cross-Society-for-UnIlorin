@@ -183,7 +183,7 @@ html {
 #activities {
   background-color: #ed1b2e;
   color: white;
-  padding-bottom: 2rem;
+  padding-bottom: 5rem;
 }
 
 .activities-header h1 {
@@ -289,6 +289,22 @@ html {
   color: white;
   font-weight: bold;
   border-radius: 0.4rem;
+}
+
+.form-message {
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+  display: none;
+}
+
+.form-message.success {
+  color: green;
+  display: block;
+}
+
+.form-message.error {
+  color: red;
+  display: block;
 }
 
 /* Contact Info */

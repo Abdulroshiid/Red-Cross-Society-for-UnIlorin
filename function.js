@@ -37,21 +37,22 @@ navAnchors.forEach((link) => {
 // LOGIC FOR THE FORM
 // select the form
 const form = document.querySelector(".join-form");
+const messageBox = document.querySelector(".form-message");
 
 // listen for submit
 form.addEventListener("submit", function (e) {
   e.preventDefault(); // stop page reload
 
   // get form values
-  const name = form.querySelector('input[type="text"]').value;
-  const email = form.querySelector('input[type="email"]').value;
-  const department = form.querySelectorAll('input[type="text"]')[1].value;
-  const level = form.querySelectorAll('input[type="text"]')[2].value;
-  const message = form.querySelector("textarea").value;
+  const name = inputs[0].value.trim();
+  const email = inputs[1].value.trim();
+  const department = inputs[2].value.trim();
+  const level = inputs[3].value.trim();
+  const message = textarea.value.trim();
 
   // simple validation
   if (!name || !email) {
-    alert("Please fill in your name and email");
+    messageBox.textContent = `Please, enter your name and email.`;
     return;
   }
 
