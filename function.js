@@ -33,3 +33,40 @@ navAnchors.forEach((link) => {
     }
   });
 });
+
+// LOGIC FOR THE FORM
+// select the form
+const form = document.querySelector(".join-form");
+
+// listen for submit
+form.addEventListener("submit", function (e) {
+  e.preventDefault(); // stop page reload
+
+  // get form values
+  const name = form.querySelector('input[type="text"]').value;
+  const email = form.querySelector('input[type="email"]').value;
+  const department = form.querySelectorAll('input[type="text"]')[1].value;
+  const level = form.querySelectorAll('input[type="text"]')[2].value;
+  const message = form.querySelector("textarea").value;
+
+  // simple validation
+  if (!name || !email) {
+    alert("Please fill in your name and email");
+    return;
+  }
+
+  // log data (for now)
+  console.log({
+    name,
+    email,
+    department,
+    level,
+    message,
+  });
+
+  // feedback to user
+  alert("Thank you for joining! We will contact you soon.");
+
+  // reset form
+  form.reset();
+});
