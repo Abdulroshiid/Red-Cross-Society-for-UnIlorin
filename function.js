@@ -35,8 +35,6 @@ navAnchors.forEach((link) => {
 });
 
 // LOGIC FOR THE FORM
-// Intialize emailJs
-emailjs.init("oI4n_Ga0yXW8dnfOJ");
 const form = document.querySelector(".join-form");
 const messageBox = document.querySelector(".form-message");
 
@@ -59,15 +57,6 @@ form.addEventListener("submit", function (e) {
     messageBox.className = "form-message error show";
     return;
   }
-
-  // Simulate Success
-  console.log({
-    name,
-    email,
-    department,
-    level,
-    message,
-  });
 
   messageBox.textContent = `Thank you for applying to join! We will contact you soon.`;
   messageBox.className = "form-message success show";
