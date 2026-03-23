@@ -35,7 +35,8 @@ navAnchors.forEach((link) => {
 });
 
 // LOGIC FOR THE FORM
-// select the form
+// Intialize emailJs
+emailjs.init("oI4n_Ga0yXW8dnfOJ");
 const form = document.querySelector(".join-form");
 const messageBox = document.querySelector(".form-message");
 
@@ -43,7 +44,9 @@ const messageBox = document.querySelector(".form-message");
 form.addEventListener("submit", function (e) {
   e.preventDefault(); // stop page reload
 
-  // get form values
+  const inputs = form.querySelectorAll("input");
+  const textarea = form.querySelector("textarea");
+
   const name = inputs[0].value.trim();
   const email = inputs[1].value.trim();
   const department = inputs[2].value.trim();
@@ -53,7 +56,7 @@ form.addEventListener("submit", function (e) {
   // simple validation
   if (!name || !email) {
     messageBox.textContent = `Please, enter your name and email.`;
-    messageBox.className = "form-message error";
+    messageBox.className = "form-message error show";
     return;
   }
 
@@ -67,7 +70,13 @@ form.addEventListener("submit", function (e) {
   });
 
   messageBox.textContent = `Thank you for applying to join! We will contact you soon.`;
+  messageBox.className = "form-message success show";
 
   // reset form
   form.reset();
+
+  // Remove message after 4 seconds
+  setTimeout(() => {
+    messageBox.classList.remove("show");
+  }, 3500);
 });
