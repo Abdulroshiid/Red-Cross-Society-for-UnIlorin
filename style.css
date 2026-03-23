@@ -218,10 +218,10 @@ html {
 }
 
 .activities-box i {
-  margin-left: 8rem;
   padding-bottom: 1rem;
   font-size: 2rem;
-  align-items: center;
+  display: flex;
+  justify-content: center;
 }
 
 .activities-box:hover {
@@ -294,10 +294,6 @@ html {
     text-align: left;
     font-weight: 600;
     font-size: 16px;
-  }
-
-  .home-page button {
-    margin-right: 10rem;
   }
 
   /* ABOUT US RESPONSIVENESS */
