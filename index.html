@@ -116,6 +116,14 @@
               action="https://formsubmit.co/abdulrasheedisyak44@gmail.com"
               method="post">
               <p class="form-message"></p>
+
+              <input
+                type="hidden"
+                name="_subject"
+                value="New Red Cross Registration" />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_template" value="table" />
+
               <input type="text" name="name" placeholder="Full Name" required />
               <input
                 type="email"
@@ -129,11 +137,12 @@
                 required />
               <input
                 type="text"
-                name="message"
+                name="level"
                 placeholder="Level (e.g. 200L)"
                 required />
               <textarea
                 placeholder="Why do you want to join?"
+                name="message"
                 rows="4"></textarea>
               <button type="submit" class="btn">Submit</button>
             </form>

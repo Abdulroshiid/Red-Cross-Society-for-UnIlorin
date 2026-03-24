@@ -40,8 +40,6 @@ const messageBox = document.querySelector(".form-message");
 
 // listen for submit
 form.addEventListener("submit", function (e) {
-  e.preventDefault(); // stop page reload
-
   const inputs = form.querySelectorAll("input");
   const textarea = form.querySelector("textarea");
 
@@ -68,4 +66,6 @@ form.addEventListener("submit", function (e) {
   setTimeout(() => {
     messageBox.classList.remove("show");
   }, 3500);
+
+  form.submit();
 });
