@@ -45,8 +45,9 @@ form.addEventListener("submit", function (e) {
 
   const name = inputs[0].value.trim();
   const email = inputs[1].value.trim();
-  const department = inputs[2].value.trim();
-  const level = inputs[3].value.trim();
+  const phone = inputs[2].value.trim();
+  const department = inputs[3].value.trim();
+  const level = inputs[4].value.trim();
   const message = textarea.value.trim();
 
   // simple validation
