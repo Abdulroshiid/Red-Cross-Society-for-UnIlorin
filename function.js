@@ -59,13 +59,11 @@ form.addEventListener("submit", function (e) {
   messageBox.textContent = `Thank you for applying to join! We will contact you soon.`;
   messageBox.className = "form-message success show";
 
+  form.submit();
   // reset form
-  form.reset();
 
   // Remove message after 4 seconds
   setTimeout(() => {
     messageBox.classList.remove("show");
   }, 3500);
-
-  form.submit();
 });
