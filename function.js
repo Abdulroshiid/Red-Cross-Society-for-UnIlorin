@@ -37,6 +37,8 @@ navAnchors.forEach((link) => {
 // LOGIC FOR THE FORM
 const form = document.querySelector(".join-form");
 const messageBox = document.querySelector(".form-message");
+const submitBtn = document.querySelector(".submit-btn");
+const btnText = submitBtn.querySelector(".btn-text");
 
 // listen for submit
 form.addEventListener("submit", function (e) {
