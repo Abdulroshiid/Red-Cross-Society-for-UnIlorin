@@ -37,8 +37,6 @@ navAnchors.forEach((link) => {
 // LOGIC FOR THE FORM
 const form = document.querySelector(".join-form");
 const messageBox = document.querySelector(".form-message");
-const submitBtn = document.querySelector(".submit-btn");
-const btnText = submitBtn.querySelector(".btn-text");
 
 // listen for submit
 form.addEventListener("submit", function (e) {
@@ -62,10 +60,11 @@ form.addEventListener("submit", function (e) {
   messageBox.textContent = `Thank you for applying to join! We will contact you soon.`;
   messageBox.className = "form-message success show";
 
+  // Submit form
+  form.submit();
+
   // Remove message after 4 seconds
   setTimeout(() => {
     messageBox.classList.remove("show");
   }, 3500);
-
-  form.submit();
 });
