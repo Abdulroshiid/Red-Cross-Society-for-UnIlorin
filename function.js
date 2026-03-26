@@ -51,7 +51,7 @@ form.addEventListener("submit", function (e) {
   const message = textarea.value.trim();
 
   // simple validation
-  if (!name || !email) {
+  if (!name || !email || !phonr || !department || !level || !message) {
     messageBox.textContent = `Please, enter your name and email.`;
     messageBox.className = "form-message error show";
     return;
