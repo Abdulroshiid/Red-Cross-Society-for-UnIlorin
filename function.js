@@ -40,6 +40,7 @@ const messageBox = document.querySelector(".form-message");
 
 // listen for submit
 form.addEventListener("submit", function (e) {
+  e.preventDefault(e);
   const inputs = form.querySelectorAll("input");
   const textarea = form.querySelector("textarea");
 
@@ -54,14 +55,15 @@ form.addEventListener("submit", function (e) {
   if (!name || !email || !phone || !department || !level || !message) {
     messageBox.textContent = `Please, fill the whole field before submitting the form`;
     messageBox.className = "form-message error show";
-    return;
   } else {
     messageBox.textContent = `Thank you for applying to join! We will contact you soon.`;
     messageBox.className = "form-message success show";
+    setTimeout(() => {
+      form.submit();
+    }, 2000);
   }
 
   // Submit form
-  form.submit();
 
   // Remove message after 3.5 seconds
   setTimeout(() => {
