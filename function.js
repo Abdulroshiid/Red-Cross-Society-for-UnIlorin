@@ -60,7 +60,7 @@ form.addEventListener("submit", function (e) {
     messageBox.className = "form-message success show";
     setTimeout(() => {
       form.submit();
-    }, 2000);
+    }, 3000);
   }
 
   // Submit form
