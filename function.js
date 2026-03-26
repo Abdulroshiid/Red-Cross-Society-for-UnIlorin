@@ -54,6 +54,7 @@ form.addEventListener("submit", function (e) {
   if (!name || !email || !phone || !department || !level || !message) {
     messageBox.textContent = `Please, fill the whole field before submitting the form`;
     messageBox.className = "form-message error show";
+    return;
   } else {
     messageBox.textContent = `Thank you for applying to join! We will contact you soon.`;
     messageBox.className = "form-message success show";
