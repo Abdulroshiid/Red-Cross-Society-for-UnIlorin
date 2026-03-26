@@ -52,7 +52,7 @@ form.addEventListener("submit", function (e) {
 
   // simple validation
   if (!name || !email || !phonr || !department || !level || !message) {
-    messageBox.textContent = `Please, enter your name and email.`;
+    messageBox.textContent = `Please, fill the whole field before submitting the form`;
     messageBox.className = "form-message error show";
     return;
   }
