@@ -43,22 +43,21 @@ form.addEventListener("submit", function (e) {
   const inputs = form.querySelectorAll("input");
   const textarea = form.querySelector("textarea");
 
-  const name = inputs[0].value.trim();
-  const email = inputs[1].value.trim();
-  const phone = inputs[2].value.trim();
-  const department = inputs[3].value.trim();
-  const level = inputs[4].value.trim();
-  const message = textarea.value.trim();
+  const name = form.querySelector('[name="name"]').value.trim();
+  const email = form.querySelector('[name="email"]').value.trim();
+  const phone = form.querySelector('[name="phone-number"]').value.trim();
+  const department = form.querySelector('[name="department"]').value.trim();
+  const level = form.querySelector('[name="level"]').value.trim();
+  const message = form.querySelector('[name="message"]').value.trim();
 
   // simple validation
-  if (!name || !email || !phonr || !department || !level || !message) {
+  if (!name || !email || !phone || !department || !level || !message) {
     messageBox.textContent = `Please, fill the whole field before submitting the form`;
     messageBox.className = "form-message error show";
-    return;
+  } else {
+    messageBox.textContent = `Thank you for applying to join! We will contact you soon.`;
+    messageBox.className = "form-message success show";
   }
-
-  messageBox.textContent = `Thank you for applying to join! We will contact you soon.`;
-  messageBox.className = "form-message success show";
 
   // Submit form
   form.submit();

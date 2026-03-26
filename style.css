@@ -299,14 +299,15 @@ html {
 
 /* SHOW STATE */
 
+.form-message.show {
+  display: block;
+}
 .form-message.success {
   color: green;
-  display: block;
 }
 
 .form-message.error {
   color: red;
-  display: block;
 }
 
 /* Contact Info */
