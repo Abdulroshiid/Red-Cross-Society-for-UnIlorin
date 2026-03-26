@@ -63,7 +63,7 @@ form.addEventListener("submit", function (e) {
   // Submit form
   form.submit();
 
-  // Remove message after 4 seconds
+  // Remove message after 3.5 seconds
   setTimeout(() => {
     messageBox.classList.remove("show");
   }, 3500);
