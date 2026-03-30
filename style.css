@@ -255,8 +255,8 @@ html {
 .join-content {
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  gap: 3rem;
+  justify-content: space-evenly;
+  gap: 5rem;
   text-align: left;
 }
 
