@@ -362,6 +362,9 @@ html {
 .footer-contact p {
   margin-bottom: 8px;
 }
+.footer-contact i {
+  margin-right: 0.5rem;
+}
 
 .footer-bottom {
   text-align: center;
