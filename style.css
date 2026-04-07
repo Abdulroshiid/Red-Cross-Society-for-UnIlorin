@@ -353,6 +353,7 @@ html {
   color: #fff;
   margin-bottom: 8px;
   text-decoration: none;
+  transition: 0.3s;
 }
 
 .footer-links a:hover {
