@@ -350,13 +350,13 @@ html {
 
 .footer-links a {
   display: block;
-  color: #ddd;
+  color: #fff;
   margin-bottom: 8px;
   text-decoration: none;
 }
 
 .footer-links a:hover {
-  color: #fff;
+  color: #d44040;
 }
 
 .footer-contact p {
