@@ -290,6 +290,11 @@ html {
   font-weight: bold;
   cursor: pointer;
   border-radius: 0.4rem;
+  transition: ease-out 0.4s;
+}
+
+.join-form .btn:hover {
+  background-color: #a71c1c;
 }
 
 .form-message {
