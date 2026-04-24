@@ -208,7 +208,7 @@ html {
   padding-block: 3rem;
   padding-inline: 2rem;
   border-radius: 0.6rem;
-  transition: ease-out 0.3s;
+  transition: ease-in 0.3s;
 }
 
 .activities-box h1 {
@@ -225,7 +225,7 @@ html {
 }
 
 .activities-box:hover {
-  background-color: #aa0a0a;
+  background-color: #7c0808;
 }
 
 /* JOIN US / CONTACT SECTION */
