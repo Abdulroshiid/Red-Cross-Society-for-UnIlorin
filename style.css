@@ -133,7 +133,7 @@ html {
   gap: 0.5rem;
   background-color: #b71c1c;
   border: none;
-  border-radius: 0.2rem;
+  border-radius: 8px;
   margin-top: 1rem;
   font-size: 1.5rem;
   transition: 0.5s ease-in;
@@ -176,7 +176,7 @@ html {
 .about-image img {
   width: 35rem;
   height: auto;
-  border-radius: 3rem;
+  border-radius: 8px;
 }
 
 /* ACTIVITIES PAGE SECTION */
@@ -207,7 +207,7 @@ html {
   background-color: #b71c1c;
   padding-block: 3rem;
   padding-inline: 2rem;
-  border-radius: 0.5rem;
+  border-radius: 8px;
   transition: ease-in 0.3s;
 }
 
@@ -272,7 +272,7 @@ html {
 .join-form textarea {
   padding: 12px;
   border: 1px solid #ddd;
-  border-radius: 6px;
+  border-radius: 8px;
   outline: none;
   font-family: inherit;
 }
@@ -289,7 +289,7 @@ html {
   color: white;
   font-weight: bold;
   cursor: pointer;
-  border-radius: 0.4rem;
+  border-radius: 8px;
   transition: ease-out 0.4s;
 }
 
@@ -430,7 +430,7 @@ html {
 
 .donation-modal-content {
   background-color: white;
-  border-radius: 12px;
+  border-radius: 8px;
   padding: 40px;
   max-width: 500px;
   width: 90%;
@@ -524,7 +524,7 @@ html {
   font-family: monospace;
   background-color: rgba(211, 47, 47, 0.1);
   padding: 8px 12px;
-  border-radius: 5px;
+  border-radius: 8px;
   display: inline-block;
   letter-spacing: 0.5px;
 }
@@ -534,7 +534,7 @@ html {
   color: white;
   border: none;
   padding: 8px 15px;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
   font-size: 0.85rem;
   margin-top: 8px;
@@ -556,7 +556,7 @@ html {
   background-color: #fff3cd;
   border-left: 4px solid #ffc107;
   padding: 15px;
-  border-radius: 6px;
+  border-radius: 8px;
   margin-bottom: 20px;
   display: flex;
   gap: 12px;
@@ -593,7 +593,7 @@ html {
   color: white;
   border: none;
   padding: 12px 30px;
-  border-radius: 6px;
+  border-radius: 8px;
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
@@ -698,7 +698,7 @@ html {
   }
 
   .about-image img {
-    border-radius: 1.5rem;
+    border-radius: 8px;
     width: 320px;
     height: 250px;
   }
