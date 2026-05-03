@@ -605,6 +605,155 @@ html {
   background-color: #a71c1c;
 }
 
+/* RECEIPT UPLOAD SECTION */
+
+.receipt-upload-section {
+  margin: 25px 0;
+  padding: 20px;
+  background: linear-gradient(135deg, #f9f9f9 0%, #fff 100%);
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+}
+
+.receipt-upload-section h3 {
+  color: #d32f2f;
+  margin-bottom: 5px;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.receipt-subtitle {
+  color: #666;
+  font-size: 0.85rem;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.file-upload-wrapper {
+  position: relative;
+}
+
+.receipt-input {
+  display: none;
+}
+
+.file-upload-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  border: 2px dashed #d32f2f;
+  border-radius: 8px;
+  background-color: rgba(211, 47, 47, 0.05);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.file-upload-label:hover {
+  border-color: #a71c1c;
+  background-color: rgba(211, 47, 47, 0.1);
+}
+
+.file-upload-label.drag-over {
+  border-color: #a71c1c;
+  background-color: rgba(211, 47, 47, 0.15);
+  box-shadow: 0 0 10px rgba(211, 47, 47, 0.2);
+}
+
+.file-upload-label i {
+  font-size: 2rem;
+  color: #d32f2f;
+  margin-bottom: 10px;
+}
+
+.upload-text {
+  color: #1a1a1a;
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 5px;
+}
+
+.file-types {
+  color: #999;
+  font-size: 0.8rem;
+}
+
+.file-preview {
+  margin-top: 15px;
+}
+
+.preview-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 15px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-top: 10px;
+}
+
+.preview-item-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+}
+
+.preview-item-icon {
+  font-size: 1.2rem;
+  color: #d32f2f;
+  min-width: 24px;
+  text-align: center;
+}
+
+.preview-item-details {
+  flex: 1;
+}
+
+.preview-item-name {
+  color: #1a1a1a;
+  font-weight: 600;
+  font-size: 0.9rem;
+  word-break: break-all;
+}
+
+.preview-item-size {
+  color: #999;
+  font-size: 0.8rem;
+}
+
+.preview-item-remove {
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: background-color 0.3s;
+}
+
+.preview-item-remove:hover {
+  background-color: #e03131;
+}
+
+.file-error {
+  color: #d32f2f;
+  font-size: 0.85rem;
+  padding: 10px;
+  background-color: rgba(211, 47, 47, 0.1);
+  border: 1px solid #d32f2f;
+  border-radius: 6px;
+  margin-top: 10px;
+  display: none;
+}
+
+.file-error.show {
+  display: block;
+}
+
 /* Responsive */
 
 /* Responsive */
@@ -751,5 +900,35 @@ html {
   .donation-close-btn {
     padding: 10px 20px;
     font-size: 0.95rem;
+  }
+
+  .file-upload-label {
+    padding: 20px;
+  }
+
+  .file-upload-label i {
+    font-size: 1.5rem;
+  }
+
+  .upload-text {
+    font-size: 0.85rem;
+  }
+
+  .file-types {
+    font-size: 0.75rem;
+  }
+
+  .preview-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .preview-item-info {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .preview-item-remove {
+    width: 100%;
   }
 }
