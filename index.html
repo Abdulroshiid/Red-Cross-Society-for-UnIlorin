@@ -45,7 +45,7 @@
             Join the Red Cross Society at University of Ilorin and make a real
             difference.
           </p>
-          <button><i class="fas fa-heart"></i>Donate</button>
+          <button id="donate-btn"><i class="fas fa-heart"></i>Donate</button>
         </div>
       </section>
 
@@ -161,6 +161,58 @@
         </div>
       </section>
     </main>
+
+    <!-- DONATION MODAL -->
+    <div id="donation-modal" class="donation-modal">
+      <div class="donation-modal-overlay" id="modal-overlay"></div>
+      <div class="donation-modal-content">
+        <button class="donation-modal-close" id="close-btn">
+          <i class="fas fa-times"></i>
+        </button>
+
+        <div class="donation-header">
+          <i class="fas fa-heart"></i>
+          <h2>Support Our Cause</h2>
+          <p>Your donation helps us save lives and serve the community</p>
+        </div>
+
+        <div class="donation-details">
+          <div class="donation-info-box">
+            <h3>Bank Details</h3>
+            <div class="donation-credential">
+              <label>Bank Name:</label>
+              <p>Opay</p>
+            </div>
+            <div class="donation-credential">
+              <label>Account Name:</label>
+              <p>Isyak Abdulrasheed</p>
+            </div>
+            <div class="donation-credential">
+              <label>Account Number:</label>
+              <p class="account-number">8135394734</p>
+              <button class="copy-btn" data-copy="8135394734">
+                <i class="fas fa-copy"></i> Copy
+              </button>
+            </div>
+          </div>
+
+          <div class="donation-note">
+            <i class="fas fa-info-circle"></i>
+            <p>
+              After making your donation, please feel free to reach out to us
+              via email or phone to confirm your contribution. Every donation
+              makes a difference!
+            </p>
+          </div>
+        </div>
+
+        <div class="donation-footer">
+          <p class="thank-you">Thank you for your generosity!</p>
+          <button class="donation-close-btn">Close</button>
+        </div>
+      </div>
+    </div>
+
     <footer class="footer">
       <div class="footer-container">
         <div class="footer-logo">

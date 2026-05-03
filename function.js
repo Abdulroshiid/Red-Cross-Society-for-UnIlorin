@@ -70,3 +70,50 @@ form.addEventListener("submit", function (e) {
     messageBox.classList.remove("show");
   }, 3500);
 });
+
+// DONATION MODAL LOGIC
+const donateBtn = document.querySelector("#donate-btn");
+const donationModal = document.querySelector("#donation-modal");
+const modalOverlay = document.querySelector("#modal-overlay");
+const closeBtns = document.querySelectorAll("#close-btn, .donation-close-btn");
+const copyBtn = document.querySelector(".copy-btn");
+
+// Open modal
+donateBtn.addEventListener("click", () => {
+  donationModal.classList.add("show");
+  document.body.style.overflow = "hidden";
+});
+
+// Close modal
+const closeModal = () => {
+  donationModal.classList.remove("show");
+  document.body.style.overflow = "auto";
+};
+
+closeBtns.forEach((btn) => {
+  btn.addEventListener("click", closeModal);
+});
+
+// Close modal when clicking on overlay
+modalOverlay.addEventListener("click", closeModal);
+
+// Copy account number to clipboard
+copyBtn.addEventListener("click", () => {
+  const accountNumber = copyBtn.getAttribute("data-copy");
+  navigator.clipboard.writeText(accountNumber).then(() => {
+    const originalText = copyBtn.innerHTML;
+    copyBtn.classList.add("copied");
+    copyBtn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+    setTimeout(() => {
+      copyBtn.classList.remove("copied");
+      copyBtn.innerHTML = originalText;
+    }, 2000);
+  });
+});
+
+// Close modal with Escape key
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    closeModal();
+  }
+});
