@@ -194,6 +194,71 @@ function showBloodDonationMessage(message, type) {
   bloodDonationMessage.className = `blood-donation-message show ${type}`;
 }
 
+// FINANCIAL DONATION FORM SUBMISSION
+const financialDonationForm = document.querySelector(
+  "#financial-donation-form",
+);
+const financialDonationMessage = document.querySelector(
+  "#financial-donation-message",
+);
+
+if (financialDonationForm) {
+  financialDonationForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    // Check if file has been uploaded
+    const receiptInput = document.querySelector("#receipt-upload");
+    if (!receiptInput.files || receiptInput.files.length === 0) {
+      showFinancialDonationMessage(
+        "Please upload a receipt image or PDF before submitting",
+        "error",
+      );
+      return;
+    }
+
+    // Validate form fields
+    const fullName = document.querySelector("#donor-full-name").value.trim();
+    const email = document.querySelector("#donor-email-field").value.trim();
+    const phone = document.querySelector("#donor-phone-field").value.trim();
+    const amount = document.querySelector("#donation-amount").value.trim();
+
+    if (!fullName || !email || !phone || !amount) {
+      showFinancialDonationMessage(
+        "Please fill in all required fields",
+        "error",
+      );
+      return;
+    }
+
+    if (isNaN(amount) || parseInt(amount) <= 0) {
+      showFinancialDonationMessage(
+        "Please enter a valid donation amount",
+        "error",
+      );
+      return;
+    }
+
+    // Show success message
+    showFinancialDonationMessage(
+      `Thank you, ${fullName}! Your donation submission has been received. We will verify your payment and contact you shortly.`,
+      "success",
+    );
+
+    // Submit the form after 2 seconds
+    setTimeout(() => {
+      financialDonationForm.submit();
+    }, 2000);
+  });
+}
+
+function showFinancialDonationMessage(message, type) {
+  financialDonationMessage.textContent = message;
+  financialDonationMessage.className = `financial-donation-message show ${type}`;
+  setTimeout(() => {
+    financialDonationMessage.classList.remove("show");
+  }, 4000);
+}
+
 // FILE UPLOAD LOGIC
 const receiptInput = document.querySelector("#receipt-upload");
 const fileUploadLabel = document.querySelector(".file-upload-label");

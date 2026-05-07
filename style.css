@@ -1233,4 +1233,18 @@ html {
     padding: 10px 16px;
     font-size: 0.95rem;
   }
+
+  /* Mobile responsiveness for financial donation form */
+  .form-group-inline {
+    grid-template-columns: 1fr;
+  }
+
+  .donor-info-section {
+    padding: 15px;
+  }
+
+  .financial-donation-submit-btn {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+  }
 }
