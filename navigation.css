@@ -1,0 +1,118 @@
+/* Navbar styling */
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 40px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+}
+
+.logo img {
+  width: 60px;
+}
+
+.nav-links ul {
+  display: flex;
+  list-style-type: none;
+  flex-direction: row;
+  gap: 3rem;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: #1a1a1a;
+  padding: 0.5rem;
+  font-weight: 500;
+  transition: color 0.5s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.nav-links li a:hover {
+  color: #d32f2f;
+}
+
+/* Mobile menu toggle (FontAwesome icon) */
+.menu-toggle {
+  display: none;
+  border: none;
+  background: transparent;
+  color: #1a1a1a;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.menu-toggle:focus {
+  outline: none;
+}
+
+.menu-toggle .fa-bars,
+.menu-toggle .fa-times {
+  pointer-events: none;
+}
+
+/* HOME PAGE SECTION */
+
+#home {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 1)),
+    url("Images/homepage-Image.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 37.5rem;
+  margin-top: 5rem;
+}
+
+.home-page {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.home-page h1 {
+  color: white;
+  font-size: 3rem;
+}
+
+.home-page p {
+  color: white;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+
+.home-page button {
+  padding-inline: 3rem;
+  padding-block: 0.7rem;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0.5rem;
+  background-color: #b71c1c;
+  border: none;
+  border-radius: 8px;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  transition: 0.5s ease-in;
+}
+
+.home-page button:hover {
+  background-color: #dc2626;
+}
+
+.home-page button i {
+  font-size: 1.5rem;
+}

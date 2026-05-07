@@ -1,0 +1,30 @@
+/* Reset some basics */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Open-sans;
+  src: url(Fonts/OpenSans-VariableFont_wdth\,wght.ttf);
+}
+
+@font-face {
+  font-family: poppins;
+  src: url(Fonts/Poppins-Regular.ttf);
+}
+
+body {
+  font-family: "poppins", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Open-sans", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
