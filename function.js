@@ -182,11 +182,10 @@ bloodDonationForm.addEventListener("submit", function (e) {
     "success",
   );
 
-  // Reset form
+  // Submit the form after 2 seconds
   setTimeout(() => {
-    bloodDonationForm.reset();
-    bloodDonationMessage.classList.remove("show");
-  }, 3000);
+    bloodDonationForm.submit();
+  }, 2000);
 });
 
 function showBloodDonationMessage(message, type) {
