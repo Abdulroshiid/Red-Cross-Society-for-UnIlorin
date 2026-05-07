@@ -207,8 +207,7 @@ if (financialDonationForm) {
     e.preventDefault();
 
     // Check if file has been uploaded
-    const receiptInput = document.querySelector("#receipt-upload");
-    if (!receiptInput.files || receiptInput.files.length === 0) {
+    if (!uploadedFile) {
       showFinancialDonationMessage(
         "Please upload a receipt image or PDF before submitting",
         "error",
@@ -259,10 +258,21 @@ function showFinancialDonationMessage(message, type) {
   }, 4000);
 }
 
-// FILE UPLOAD LOGIC
-const receiptInput = document.querySelector("#receipt-upload");
-const fileUploadLabel = document.querySelector(".file-upload-label");
-const filePreview = document.querySelector("#file-preview");
+// FILE UPLOAD LOGIC FOR DONATION FORM
+const receiptUploadContainer = document.querySelector(
+  ".receipt-upload-section",
+);
+let donationReceiptInput = null;
+let donationFileUploadLabel = null;
+let donationFilePreview = null;
+
+if (receiptUploadContainer) {
+  donationReceiptInput = receiptUploadContainer.querySelector(".receipt-input");
+  donationFileUploadLabel =
+    receiptUploadContainer.querySelector(".file-upload-label");
+  donationFilePreview = receiptUploadContainer.querySelector(".file-preview");
+}
+
 const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5MB
 const ALLOWED_TYPES = [
   "application/pdf",
@@ -275,29 +285,33 @@ const ALLOWED_EXTENSIONS = [".pdf", ".jpg", ".jpeg", ".png", ".gif"];
 let uploadedFile = null;
 
 // Handle file selection via input
-receiptInput.addEventListener("change", (e) => {
-  handleFileUpload(e.target.files);
-});
+if (donationReceiptInput) {
+  donationReceiptInput.addEventListener("change", (e) => {
+    handleFileUpload(e.target.files);
+  });
+}
 
 // Handle drag and drop
-fileUploadLabel.addEventListener("dragover", (e) => {
-  e.preventDefault();
-  e.stopPropagation();
-  fileUploadLabel.classList.add("drag-over");
-});
+if (donationFileUploadLabel) {
+  donationFileUploadLabel.addEventListener("dragover", (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    donationFileUploadLabel.classList.add("drag-over");
+  });
 
-fileUploadLabel.addEventListener("dragleave", (e) => {
-  e.preventDefault();
-  e.stopPropagation();
-  fileUploadLabel.classList.remove("drag-over");
-});
+  donationFileUploadLabel.addEventListener("dragleave", (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    donationFileUploadLabel.classList.remove("drag-over");
+  });
 
-fileUploadLabel.addEventListener("drop", (e) => {
-  e.preventDefault();
-  e.stopPropagation();
-  fileUploadLabel.classList.remove("drag-over");
-  handleFileUpload(e.dataTransfer.files);
-});
+  donationFileUploadLabel.addEventListener("drop", (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    donationFileUploadLabel.classList.remove("drag-over");
+    handleFileUpload(e.dataTransfer.files);
+  });
+}
 
 function validateFile(file) {
   // Check file type
@@ -348,7 +362,9 @@ function handleFileUpload(files) {
 
   if (!validation.valid) {
     showFileError(validation.error);
-    receiptInput.value = "";
+    if (donationReceiptInput) {
+      donationReceiptInput.value = "";
+    }
     uploadedFile = null;
     return;
   }
@@ -361,7 +377,7 @@ function handleFileUpload(files) {
 }
 
 function displayFilePreview(file) {
-  filePreview.innerHTML = `
+  donationFilePreview.innerHTML = `
     <div class="preview-item">
       <div class="preview-item-info">
         <div class="preview-item-icon">
@@ -372,7 +388,7 @@ function displayFilePreview(file) {
           <p class="preview-item-size">${formatFileSize(file.size)}</p>
         </div>
       </div>
-      <button class="preview-item-remove" onclick="removeFilePreview()">
+      <button type="button" class="preview-item-remove" onclick="removeFilePreview()">
         Remove
       </button>
     </div>
@@ -381,24 +397,31 @@ function displayFilePreview(file) {
 
 function removeFilePreview() {
   uploadedFile = null;
-  receiptInput.value = "";
-  filePreview.innerHTML = "";
+  if (donationReceiptInput) {
+    donationReceiptInput.value = "";
+  }
+  if (donationFilePreview) {
+    donationFilePreview.innerHTML = "";
+  }
   clearFileError();
 }
 
 function showFileError(message) {
-  let errorDiv = filePreview.querySelector(".file-error");
+  if (!donationFilePreview) return;
+  let errorDiv = donationFilePreview.querySelector(".file-error");
   if (!errorDiv) {
     errorDiv = document.createElement("div");
     errorDiv.className = "file-error";
-    filePreview.appendChild(errorDiv);
+    donationFilePreview.appendChild(errorDiv);
   }
   errorDiv.textContent = message;
   errorDiv.classList.add("show");
 }
 
 function clearFileError() {
-  const errorDiv = filePreview.querySelector(".file-error");
+  const errorDiv = donationFilePreview
+    ? donationFilePreview.querySelector(".file-error")
+    : null;
   if (errorDiv) {
     errorDiv.classList.remove("show");
   }
