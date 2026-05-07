@@ -662,8 +662,8 @@ html {
 }
 
 .form-group-inline {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
   gap: 15px;
   margin-bottom: 15px;
 }
