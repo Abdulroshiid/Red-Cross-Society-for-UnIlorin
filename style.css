@@ -482,6 +482,164 @@ html {
   font-size: 0.95rem;
 }
 
+/* DONATION TABS */
+
+.donation-tabs {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.donation-tab-btn {
+  flex: 1;
+  padding: 12px 16px;
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  color: #666;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.donation-tab-btn i {
+  font-size: 1rem;
+}
+
+.donation-tab-btn:hover {
+  color: #d32f2f;
+}
+
+.donation-tab-btn.active {
+  color: #d32f2f;
+  border-bottom-color: #d32f2f;
+}
+
+.donation-tab-content {
+  display: none;
+  animation: fadeIn 0.3s ease;
+}
+
+.donation-tab-content.active {
+  display: block;
+}
+
+/* BLOOD DONATION FORM */
+
+.blood-donation-details {
+  padding: 10px 0;
+}
+
+.blood-donation-info {
+  background-color: rgba(211, 47, 47, 0.1);
+  border-left: 4px solid #d32f2f;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.blood-donation-info p {
+  color: #333;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.blood-donation-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  color: #333;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group select {
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-family: inherit;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #d32f2f;
+  box-shadow: 0 0 0 3px rgba(211, 47, 47, 0.1);
+}
+
+.form-group input[type="checkbox"] {
+  width: auto;
+  margin-right: 8px;
+}
+
+.form-group label[for="blood-donor-health"] {
+  display: flex;
+  align-items: center;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+.blood-donation-submit-btn {
+  background-color: #d32f2f;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 8px;
+}
+
+.blood-donation-submit-btn:hover {
+  background-color: #a71c1c;
+}
+
+.blood-donation-message {
+  margin: 0;
+  font-size: 0.9rem;
+  padding: 10px;
+  border-radius: 6px;
+  text-align: center;
+  display: none;
+}
+
+.blood-donation-message.show {
+  display: block;
+}
+
+.blood-donation-message.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.blood-donation-message.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
 .donation-details {
   margin: 30px 0;
 }
@@ -930,5 +1088,31 @@ html {
 
   .preview-item-remove {
     width: 100%;
+  }
+
+  /* Mobile responsiveness for tabs */
+  .donation-tabs {
+    flex-direction: column;
+  }
+
+  .donation-tab-btn {
+    justify-content: flex-start;
+    border-bottom: none;
+    border-left: 3px solid transparent;
+    padding: 10px 12px;
+  }
+
+  .donation-tab-btn.active {
+    border-bottom: none;
+    border-left-color: #d32f2f;
+  }
+
+  .form-group label[for="blood-donor-health"] {
+    font-size: 0.85rem;
+  }
+
+  .blood-donation-submit-btn {
+    padding: 10px 16px;
+    font-size: 0.95rem;
   }
 }

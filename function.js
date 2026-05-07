@@ -78,6 +78,14 @@ const modalOverlay = document.querySelector("#modal-overlay");
 const closeBtns = document.querySelectorAll("#close-btn, .donation-close-btn");
 const copyBtn = document.querySelector(".copy-btn");
 
+// Donation Tabs
+const donationTabBtns = document.querySelectorAll(".donation-tab-btn");
+const donationTabContents = document.querySelectorAll(".donation-tab-content");
+
+// Blood Donation Form
+const bloodDonationForm = document.querySelector("#blood-donation-form");
+const bloodDonationMessage = document.querySelector("#blood-donation-message");
+
 // Open modal
 donateBtn.addEventListener("click", () => {
   donationModal.classList.add("show");
@@ -117,6 +125,74 @@ document.addEventListener("keydown", (e) => {
     closeModal();
   }
 });
+
+// DONATION TABS LOGIC
+donationTabBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    // Remove active class from all buttons and contents
+    donationTabBtns.forEach((b) => b.classList.remove("active"));
+    donationTabContents.forEach((c) => c.classList.remove("active"));
+
+    // Add active class to clicked button and corresponding content
+    btn.classList.add("active");
+    const tabName = btn.getAttribute("data-tab");
+    const tabContent = document.querySelector(`#${tabName}`);
+    if (tabContent) {
+      tabContent.classList.add("active");
+    }
+  });
+});
+
+// BLOOD DONATION FORM SUBMISSION
+bloodDonationForm.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const formData = {
+    name: document.querySelector("#blood-donor-name").value.trim(),
+    email: document.querySelector("#blood-donor-email").value.trim(),
+    phone: document.querySelector("#blood-donor-phone").value.trim(),
+    bloodType: document.querySelector("#blood-type").value,
+    department: document.querySelector("#blood-donor-department").value.trim(),
+    healthStatus: document.querySelector("#blood-donor-health").checked,
+  };
+
+  // Validate required fields
+  if (
+    !formData.name ||
+    !formData.email ||
+    !formData.phone ||
+    !formData.bloodType ||
+    !formData.department
+  ) {
+    showBloodDonationMessage("Please fill in all required fields", "error");
+    return;
+  }
+
+  if (!formData.healthStatus) {
+    showBloodDonationMessage(
+      "You must confirm that you are in good health to donate blood",
+      "error",
+    );
+    return;
+  }
+
+  // Show success message
+  showBloodDonationMessage(
+    `Thank you, ${formData.name}! You have been registered as a blood donor. We will contact you in case of emergency. Your blood type: ${formData.bloodType}`,
+    "success",
+  );
+
+  // Reset form
+  setTimeout(() => {
+    bloodDonationForm.reset();
+    bloodDonationMessage.classList.remove("show");
+  }, 3000);
+});
+
+function showBloodDonationMessage(message, type) {
+  bloodDonationMessage.textContent = message;
+  bloodDonationMessage.className = `blood-donation-message show ${type}`;
+}
 
 // FILE UPLOAD LOGIC
 const receiptInput = document.querySelector("#receipt-upload");

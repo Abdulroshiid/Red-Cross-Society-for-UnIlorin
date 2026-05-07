@@ -176,51 +176,153 @@
           <p>Your donation helps us save lives and serve the community</p>
         </div>
 
-        <div class="donation-details">
-          <div class="donation-info-box">
-            <h3>Bank Details</h3>
-            <div class="donation-credential">
-              <label>Bank Name:</label>
-              <p>Opay</p>
+        <!-- DONATION TABS -->
+        <div class="donation-tabs">
+          <button class="donation-tab-btn active" data-tab="financial-donation">
+            <i class="fas fa-money-bill-wave"></i> Financial Donation
+          </button>
+          <button class="donation-tab-btn" data-tab="blood-donation">
+            <i class="fas fa-droplet"></i> Blood Donation
+          </button>
+        </div>
+
+        <!-- FINANCIAL DONATION TAB -->
+        <div id="financial-donation" class="donation-tab-content active">
+          <div class="donation-details">
+            <div class="donation-info-box">
+              <h3>Bank Details</h3>
+              <div class="donation-credential">
+                <label>Bank Name:</label>
+                <p>Opay</p>
+              </div>
+              <div class="donation-credential">
+                <label>Account Name:</label>
+                <p>Isyak Abdulrasheed</p>
+              </div>
+              <div class="donation-credential">
+                <label>Account Number:</label>
+                <p class="account-number">8135394734</p>
+                <button class="copy-btn" data-copy="8135394734">
+                  <i class="fas fa-copy"></i> Copy
+                </button>
+              </div>
             </div>
-            <div class="donation-credential">
-              <label>Account Name:</label>
-              <p>Isyak Abdulrasheed</p>
+
+            <div class="donation-note">
+              <i class="fas fa-info-circle"></i>
+              <p>
+                After making payment, please attach the receipt below to confirm
+                your contribution. Every donation makes a difference!
+              </p>
             </div>
-            <div class="donation-credential">
-              <label>Account Number:</label>
-              <p class="account-number">8135394734</p>
-              <button class="copy-btn" data-copy="8135394734">
-                <i class="fas fa-copy"></i> Copy
+
+            <div class="receipt-upload-section">
+              <h3>Upload Receipt</h3>
+              <div class="file-upload-wrapper">
+                <input
+                  type="file"
+                  id="receipt-upload"
+                  class="receipt-input"
+                  accept=".pdf,.jpg,.jpeg,.png,.gif" />
+                <label for="receipt-upload" class="file-upload-label">
+                  <i class="fas fa-cloud-upload-alt"></i>
+                  <span class="upload-text"
+                    >Click to upload or drag and drop</span
+                  >
+                  <span class="file-types"
+                    >PDF, JPG, PNG, or GIF (Max 5MB)</span
+                  >
+                </label>
+                <div class="file-preview" id="file-preview"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- BLOOD DONATION TAB -->
+        <div id="blood-donation" class="donation-tab-content">
+          <div class="blood-donation-details">
+            <div class="blood-donation-info">
+              <p>
+                Register as a blood donor to help save lives in emergency
+                situations. Your information will be kept confidential and used
+                only for urgent medical needs.
+              </p>
+            </div>
+
+            <form class="blood-donation-form" id="blood-donation-form">
+              <div class="form-group">
+                <label for="blood-donor-name">Full Name *</label>
+                <input
+                  type="text"
+                  id="blood-donor-name"
+                  name="donor-name"
+                  placeholder="Enter your full name"
+                  required />
+              </div>
+
+              <div class="form-group">
+                <label for="blood-donor-email">Email Address *</label>
+                <input
+                  type="email"
+                  id="blood-donor-email"
+                  name="donor-email"
+                  placeholder="Enter your email"
+                  required />
+              </div>
+
+              <div class="form-group">
+                <label for="blood-donor-phone">Phone Number *</label>
+                <input
+                  type="tel"
+                  id="blood-donor-phone"
+                  name="donor-phone"
+                  placeholder="Enter your phone number"
+                  required />
+              </div>
+
+              <div class="form-group">
+                <label for="blood-type">Blood Type *</label>
+                <select id="blood-type" name="blood-type" required>
+                  <option value="">Select your blood type</option>
+                  <option value="O+">O+</option>
+                  <option value="O-">O-</option>
+                  <option value="A+">A+</option>
+                  <option value="A-">A-</option>
+                  <option value="B+">B+</option>
+                  <option value="B-">B-</option>
+                  <option value="AB+">AB+</option>
+                  <option value="AB-">AB-</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="blood-donor-department">Department/Faculty *</label>
+                <input
+                  type="text"
+                  id="blood-donor-department"
+                  name="donor-department"
+                  placeholder="Enter your department"
+                  required />
+              </div>
+
+              <div class="form-group">
+                <label for="blood-donor-health">
+                  <input
+                    type="checkbox"
+                    id="blood-donor-health"
+                    name="health-status"
+                    required />
+                  I confirm that I am in good health and eligible to donate
+                  blood *
+                </label>
+              </div>
+
+              <p class="blood-donation-message" id="blood-donation-message"></p>
+              <button type="submit" class="blood-donation-submit-btn">
+                Register as Blood Donor
               </button>
-            </div>
-          </div>
-
-          <div class="donation-note">
-            <i class="fas fa-info-circle"></i>
-            <p>
-              After making payment, please attach the receipt below to confirm
-              your contribution. Every donation makes a difference!
-            </p>
-          </div>
-
-          <div class="receipt-upload-section">
-            <h3>Upload Receipt</h3>
-            <div class="file-upload-wrapper">
-              <input
-                type="file"
-                id="receipt-upload"
-                class="receipt-input"
-                accept=".pdf,.jpg,.jpeg,.png,.gif" />
-              <label for="receipt-upload" class="file-upload-label">
-                <i class="fas fa-cloud-upload-alt"></i>
-                <span class="upload-text"
-                  >Click to upload or drag and drop</span
-                >
-                <span class="file-types">PDF, JPG, PNG, or GIF (Max 5MB)</span>
-              </label>
-              <div class="file-preview" id="file-preview"></div>
-            </div>
+            </form>
           </div>
         </div>
 
