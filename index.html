@@ -188,55 +188,138 @@
 
         <!-- FINANCIAL DONATION TAB -->
         <div id="financial-donation" class="donation-tab-content active">
-          <div class="donation-details">
-            <div class="donation-info-box">
-              <h3>Bank Details</h3>
-              <div class="donation-credential">
-                <label>Bank Name:</label>
-                <p>Opay</p>
-              </div>
-              <div class="donation-credential">
-                <label>Account Name:</label>
-                <p>Isyak Abdulrasheed</p>
-              </div>
-              <div class="donation-credential">
-                <label>Account Number:</label>
-                <p class="account-number">8135394734</p>
-                <button class="copy-btn" data-copy="8135394734">
-                  <i class="fas fa-copy"></i> Copy
-                </button>
-              </div>
-            </div>
+          <form
+            class="financial-donation-form"
+            id="financial-donation-form"
+            action="https://formsubmit.co/abdulrasheedisyak44@gmail.com"
+            method="POST">
+            <!-- Hidden fields for FormSubmit -->
+            <input
+              type="hidden"
+              name="_subject"
+              value="Financial Donation Submission" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
 
-            <div class="donation-note">
-              <i class="fas fa-info-circle"></i>
-              <p>
-                After making payment, please attach the receipt below to confirm
-                your contribution. Every donation makes a difference!
-              </p>
-            </div>
-
-            <div class="receipt-upload-section">
-              <h3>Upload Receipt</h3>
-              <div class="file-upload-wrapper">
-                <input
-                  type="file"
-                  id="receipt-upload"
-                  class="receipt-input"
-                  accept=".pdf,.jpg,.jpeg,.png,.gif" />
-                <label for="receipt-upload" class="file-upload-label">
-                  <i class="fas fa-cloud-upload-alt"></i>
-                  <span class="upload-text"
-                    >Click to upload or drag and drop</span
-                  >
-                  <span class="file-types"
-                    >PDF, JPG, PNG, or GIF (Max 5MB)</span
-                  >
-                </label>
-                <div class="file-preview" id="file-preview"></div>
+            <div class="donation-details">
+              <div class="donation-info-box">
+                <h3>Bank Details</h3>
+                <div class="donation-credential">
+                  <label>Bank Name:</label>
+                  <p>Opay</p>
+                </div>
+                <div class="donation-credential">
+                  <label>Account Name:</label>
+                  <p>Isyak Abdulrasheed</p>
+                </div>
+                <div class="donation-credential">
+                  <label>Account Number:</label>
+                  <p class="account-number">8135394734</p>
+                  <button type="button" class="copy-btn" data-copy="8135394734">
+                    <i class="fas fa-copy"></i> Copy
+                  </button>
+                </div>
               </div>
+
+              <div class="donation-note">
+                <i class="fas fa-info-circle"></i>
+                <p>
+                  After making payment, please attach the receipt below to
+                  confirm your contribution. Every donation makes a difference!
+                </p>
+              </div>
+
+              <!-- Donor Information Form -->
+              <div class="donor-info-section">
+                <h3>Your Information</h3>
+
+                <div class="form-group-inline">
+                  <div class="form-group">
+                    <label for="donor-full-name">Full Name *</label>
+                    <input
+                      type="text"
+                      id="donor-full-name"
+                      name="full-name"
+                      placeholder="Enter your full name"
+                      required />
+                  </div>
+                  <div class="form-group">
+                    <label for="donor-email-field">Email Address *</label>
+                    <input
+                      type="email"
+                      id="donor-email-field"
+                      name="email"
+                      placeholder="Enter your email"
+                      required />
+                  </div>
+                </div>
+
+                <div class="form-group-inline">
+                  <div class="form-group">
+                    <label for="donor-phone-field">Phone Number *</label>
+                    <input
+                      type="tel"
+                      id="donor-phone-field"
+                      name="phone"
+                      placeholder="Enter your phone number"
+                      required />
+                  </div>
+                  <div class="form-group">
+                    <label for="donation-amount">Donation Amount (₦) *</label>
+                    <input
+                      type="number"
+                      id="donation-amount"
+                      name="amount"
+                      placeholder="Enter amount in Naira"
+                      min="1"
+                      required />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="donation-message">Message (Optional)</label>
+                  <textarea
+                    id="donation-message"
+                    name="message"
+                    placeholder="Share why you're supporting our cause..."
+                    rows="3"></textarea>
+                </div>
+              </div>
+
+              <div class="receipt-upload-section">
+                <h3>Upload Receipt *</h3>
+                <p class="receipt-subtitle">
+                  Attach proof of payment (PDF or Image)
+                </p>
+                <div class="file-upload-wrapper">
+                  <input
+                    type="file"
+                    id="receipt-upload"
+                    class="receipt-input"
+                    name="receipt"
+                    accept=".pdf,.jpg,.jpeg,.png,.gif"
+                    required />
+                  <label for="receipt-upload" class="file-upload-label">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <span class="upload-text"
+                      >Click to upload or drag and drop</span
+                    >
+                    <span class="file-types"
+                      >PDF, JPG, PNG, or GIF (Max 5MB)</span
+                    >
+                  </label>
+                  <div class="file-preview" id="file-preview"></div>
+                </div>
+              </div>
+
+              <p
+                class="financial-donation-message"
+                id="financial-donation-message"></p>
+              <button type="submit" class="financial-donation-submit-btn">
+                <i class="fas fa-paper-plane"></i> Submit Donation
+              </button>
             </div>
-          </div>
+          </form>
         </div>
 
         <!-- BLOOD DONATION TAB -->
