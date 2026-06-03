@@ -456,7 +456,10 @@ html {
   font-size: 1.1rem;
   cursor: pointer;
   color: #d32f2f;
-  transition: background-color 0.3s, color 0.3s, transform 0.2s;
+  transition:
+    background-color 0.3s,
+    color 0.3s,
+    transform 0.2s;
   padding: 0;
 }
 
@@ -585,8 +588,11 @@ html {
   border-radius: 14px;
   font-size: 0.95rem;
   font-family: inherit;
-  transition: border-color 0.3s, box-shadow 0.3s;
+  transition:
+    border-color 0.3s,
+    box-shadow 0.3s;
   background-color: #fff;
+}
 
 .form-group input:focus,
 .form-group select:focus,
@@ -594,6 +600,7 @@ html {
   outline: none;
   border-color: #d32f2f;
   box-shadow: 0 0 0 4px rgba(211, 47, 47, 0.14);
+}
 
 .form-group input[type="checkbox"] {
   width: auto;
@@ -669,6 +676,7 @@ html {
   color: #b71c1c;
   margin-bottom: 18px;
   font-size: 1.05rem;
+}
 
 .form-group-inline {
   display: flex;
@@ -727,7 +735,9 @@ html {
   font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s;
+  transition:
+    background-color 0.3s,
+    transform 0.2s;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -825,7 +835,9 @@ html {
   cursor: pointer;
   font-size: 0.9rem;
   margin-top: 12px;
-  transition: background-color 0.3s, transform 0.2s;
+  transition:
+    background-color 0.3s,
+    transform 0.2s;
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -897,6 +909,8 @@ html {
   background: linear-gradient(180deg, #fff 0%, #fff6f6 100%);
   border: 1px solid rgba(211, 47, 47, 0.15);
   border-radius: 18px;
+}
+
 .receipt-upload-section h3 {
   color: #d32f2f;
   margin-bottom: 5px;
@@ -930,7 +944,10 @@ html {
   border-radius: 18px;
   background-color: rgba(255, 244, 244, 0.9);
   cursor: pointer;
-  transition: border-color 0.3s ease, background-color 0.3s ease, transform 0.2s ease;
+  transition:
+    border-color 0.3s ease,
+    background-color 0.3s ease,
+    transform 0.2s ease;
 }
 
 .file-upload-label:hover {
